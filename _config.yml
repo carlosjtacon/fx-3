@@ -1,2 +1,3 @@
 exclude:
   - "*readme.md"
+  - "*.sh"

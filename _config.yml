@@ -1,3 +1,29 @@
+permalink: "/:categories/:title"
+
+collections:
+  pages:
+    output: true
+  photos:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+  - scope:
+      path: ""
+      type: "photos"
+    values:
+      layout: "photo"
+
 exclude:
   - "*readme.md"
   - "*.sh"

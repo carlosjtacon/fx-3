@@ -1,0 +1,12 @@
+---
+permalink: /
+---
+
+<ul>
+    {% for photo in site.photos %}
+      <li>
+        <h2><a href="{{ photo.url }}">{{ photo.title }}</a></h2>
+        <img src="/assets/photos/{{ photo.title }}-thumb.webp"/>
+      </li>
+    {% endfor %}
+  </ul>

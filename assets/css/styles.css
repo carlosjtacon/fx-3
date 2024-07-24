@@ -8,9 +8,13 @@
 }
 
 :root {
-    --accentColor: rgb(226, 83, 83);
-    --inkColor: rgb(20, 20, 20);
-    --backgroundColor: rgb(250, 250, 250);
+    --colorBlack: rgb(28, 28, 28);
+    --colorWhite: rgb(230, 230, 230);
+    --colorAccentRed: rgb(235 29 38);
+    --colorAccentOrange: rgb(255 183 0);
+    
+    --inkColor: var(--colorWhite);
+    --backgroundColor: var(--colorBlack);
 }
 
 html {
@@ -41,7 +45,7 @@ img {
 
 .header {
     padding: 5px;
-    max-width: 512px;
+    max-width: 1024px;
     margin-bottom: 2em;
 }
 
@@ -49,7 +53,7 @@ img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    max-width: 512px;
+    max-width: 1024px;
     margin-bottom: 2em;
 }
 

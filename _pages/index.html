@@ -5,8 +5,9 @@ permalink: /
 <ul>
     {% for photo in site.photos %}
       <li>
-        <h2><a href="{{ photo.url }}">{{ photo.title }}</a></h2>
-        <img src="/assets/photos/{{ photo.title }}-thumb.webp"/>
+        <a href="{{ photo.url }}">
+          <img class="roll" src="/assets/photos/{{ photo.title }}-thumb.webp"/>
+        </a>
       </li>
     {% endfor %}
   </ul>

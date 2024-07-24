@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <link rel="preload" href="/assets/fonts/hubot_sans/Hubot-Sans.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    <img src="/assets/images/yashica_fx-3_super.webp" />
-    {{ content }}
+      <a href="/">
+        <img class="header" src="/assets/images/yashica_fx-3_super.webp"/>
+      </a>
+      {{ content }}
   </body>
 </html>

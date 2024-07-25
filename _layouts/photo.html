@@ -2,7 +2,7 @@
 layout: default
 ---
 <h1><span class="film_number">{{ page.title }}</span> {{ page.photo_filename }}</h1>
-<img src="/assets/photos/{{ page.photo_filename }}.jpeg"/>
+<img class="imgdetails" src="/assets/photos/{{ page.photo_filename }}.jpeg"/>
 {{ content }}
 
 <!-- {% assign next_photo_number = page.title | plus: 0 %}

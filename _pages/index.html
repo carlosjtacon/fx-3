@@ -3,11 +3,12 @@ permalink: /
 ---
 
 <ul>
-    {% for photo in site.photos %}
-      <li>
-        <a href="{{ photo.url }}">
-          <img class="roll" src="/assets/photos/{{ photo.title }}-thumb.webp"/>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  {% assign site_photos = site.photos | reverse %}
+  {% for photo in site_photos %}
+    <li>
+      <a href="{{ photo.url }}">
+        <img class="roll" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

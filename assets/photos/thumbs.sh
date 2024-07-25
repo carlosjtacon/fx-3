@@ -6,6 +6,6 @@ do
     if [[ $i != *-thumb.webp ]]
     then
         filename=`basename -s .jpeg $i`
-        magick "$i" -thumbnail "${THUMB_MAX}x${THUMB_MAX}>" "$filename-thumb.webp"
+        magick "$i" -thumbnail "${THUMB_MAX}>" "$filename-thumb.webp"
     fi
 done

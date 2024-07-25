@@ -17,11 +17,8 @@
     --backgroundColor: var(--colorBlack);
 }
 
-html {
-    font-family: 'Hubot Sans';
-}
-
 body {
+    font-family: 'Hubot Sans';
     background: var(--backgroundColor);
     color: var(--inkColor);
     padding: 2em;
@@ -31,23 +28,10 @@ body {
 }
 
 h1 {
-    /* font-style: italic; */
     text-transform: uppercase;
     font-size: 1.5em;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
 
 .header {
     padding: 5px;
@@ -66,6 +50,30 @@ img {
     background-image: url('/assets/images/fx3_color.webp');
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 100%;
+    max-width: 100%;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+@media all and (min-width: 1024px) { 
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
 .roll {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -82,14 +90,9 @@ img {
 .film_number {
     color: var(--colorAccentOrange);
     font-size: 0.8em;
-    /* font-weight: 300; */
-    /* font-style: italic; */
+    font-weight: 500;
 }
 
 .film_number::before {
     content: '#';
 }
-
-/* .film_number::after {
-    content: ' ·';
-} */

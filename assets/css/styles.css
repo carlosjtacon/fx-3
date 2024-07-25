@@ -30,6 +30,12 @@ body {
     margin: auto;
 }
 
+h1 {
+    /* font-style: italic; */
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -72,3 +78,18 @@ img {
 .roll:hover {
     filter: invert(1);
 }
+
+.film_number {
+    color: var(--colorAccentOrange);
+    font-size: 0.8em;
+    /* font-weight: 300; */
+    /* font-style: italic; */
+}
+
+.film_number::before {
+    content: '#';
+}
+
+/* .film_number::after {
+    content: ' ·';
+} */

@@ -11,7 +11,7 @@ permalink: /filmstrip
         {% if mod != 0 %}
             <!-- odd -->
             <a href="{{ photo.url }}">
-                <img class="roll" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
+                <img style="animation-delay: {{ forloop.index }}50ms;" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
             </a>
             
         {% endif %}
@@ -23,7 +23,7 @@ permalink: /filmstrip
             {% if mod == 0 %}
                 <!-- odd -->
                 <a href="{{ photo.url }}">
-                    <img class="roll" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
+                    <img style="animation-delay: {{ forloop.index }}50ms;" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
                 </a>
                 
             {% endif %}

@@ -65,6 +65,19 @@ h1 {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 1024px;
+    margin-bottom: 2em;
+    animation-name: develop;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes develop {
+    from { filter: invert(1); }
+    to { filter: invert(0); }
 }
 
 @media all and (min-width: 1024px) { 
@@ -74,18 +87,6 @@ h1 {
     }
 }
 
-.roll {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    max-width: 1024px;
-    margin-bottom: 2em;
-    transition: filter 0.2s ease-in-out;
-}
-
-.roll:hover {
-    filter: invert(1);
-}
 
 .film_number {
     color: var(--colorAccentOrange);

@@ -1,14 +1,7 @@
 ---
+layout: none
 permalink: /
 ---
 
-<ul>
-  {% assign site_photos = site.photos | reverse %}
-  {% for photo in site_photos %}
-    <li>
-      <a href="{{ photo.url }}">
-        <img class="roll" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+{% assign filmstrip = site.pages | where: 'name','filmstrip.html' %}
+{{ filmstrip }}

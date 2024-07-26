@@ -4,7 +4,7 @@ layout: default
 
 {% include breadcrumbs.html %}
 
-{% assign pos = page.url | size | minus: 1 %}
+{% assign pos = page.url | size | minus: 4 %}
 {% assign url_base = page.url | slice: 0, pos %}
 
 {% assign photo_number = page.title | plus: 0 %}
@@ -20,7 +20,7 @@ layout: default
 {% endif %}
 
 <span class="navigation">
-    <a href="{{url_base}}{{previous_photo_number}}">← Previous</a> · <a href="{{url_base}}{{next_photo_number}}">Next →</a>
+    <a href="{{url_base}}{{previous_photo_number | prepend: '0000' | slice: -4, 4 }}">← Previous</a> · <a href="{{url_base}}{{next_photo_number | prepend: '0000' | slice: -4, 4 }}">Next →</a>
 </span>
 
 <h1><span class="film_number">{{ page.title }}</span> {{ page.photo_filename }}</h1>

@@ -2,6 +2,8 @@
 permalink: /filmstrip
 ---
 
+{% include header.html %}
+
 {% assign site_photos = site.photos | reverse %}
 {% for photo in site_photos %}
 <div class="thumbnail">

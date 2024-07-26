@@ -1,7 +1,5 @@
 ---
-layout: none
 permalink: /
 ---
 
-{% assign filmstrip = site.pages | where: 'name','filmstrip.html' %}
-{{ filmstrip }}
+{% include_relative /filmstrip.html %}

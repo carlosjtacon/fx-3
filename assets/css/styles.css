@@ -23,7 +23,7 @@ body {
     color: var(--inkColor);
     padding: 2em;
     min-width: 0;
-    max-width: 60em;
+    max-width: 55em;
     margin: auto;
 }
 

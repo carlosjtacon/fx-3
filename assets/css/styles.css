@@ -30,7 +30,8 @@ body {
 
 h1 {
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.25em;
+    margin-top: 2em;
 }
 
 a {
@@ -39,8 +40,12 @@ a {
     font-weight: 600;
 }
 
+a:hover {
+    color: var(--colorAccentOrange);
+}
+
 p {
-    font-size: 1.25em;
+    font-size: 1.35em;
     font-weight: 800;
 }
 
@@ -64,15 +69,6 @@ p {
 .thumbnail {
     float: left;
     width: 100%;
-}
-
-@media all and (min-width: 1024px) { 
-    body {
-        font-size: 1em;
-    }
-    .thumbnail {
-        width: 25%;
-    }
 }
 
 .thumbnail img {
@@ -109,6 +105,27 @@ p {
 }
 
 .navigation {
-    position: relative;
-    float: right;
+    float: left;
+    margin-top: 1em;
+}
+
+/* DESKTOP OVERRIDES */
+@media all and (min-width: 1024px) { 
+    body {
+        font-size: 1em;
+    }
+
+    h1 {
+        margin-top: 1em;
+    }
+
+    .thumbnail {
+        width: 25%;
+    }
+
+    .navigation {
+        font-size: 1.15em;;
+        position: relative;
+        float: right;
+    }
 }

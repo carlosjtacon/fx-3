@@ -19,6 +19,7 @@
 
 body {
     font-family: 'Hubot Sans';
+    font-size: 3em;
     background: var(--backgroundColor);
     color: var(--inkColor);
     padding: 2em;
@@ -66,6 +67,9 @@ p {
 }
 
 @media all and (min-width: 1024px) { 
+    body {
+        font-size: 1em;
+    }
     .thumbnail {
         width: 25%;
     }

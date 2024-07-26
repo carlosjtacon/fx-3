@@ -119,6 +119,12 @@ p {
     filter: brightness(1.5) saturate(5);
 }
 
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: grey;
+}
+
 /* DESKTOP OVERRIDES */
 @media all and (min-width: 1024px) { 
     body {

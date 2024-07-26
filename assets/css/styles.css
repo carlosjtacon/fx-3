@@ -32,6 +32,10 @@ h1 {
     font-size: 1.5em;
 }
 
+a {
+    color: var(--colorAccentRed);
+}
+
 .header {
     padding: 5px;
     width: 100%;

@@ -49,20 +49,23 @@ h1 {
     background-image: url('/assets/images/fx3_color.webp');
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
+.thumbnail {
+    float: left;
+    width: 100%;
 }
 
-.column {
-    flex: 100%;
-    max-width: 100%;
+@media all and (min-width: 1024px) { 
+    .thumbnail {
+        width: 25%;
+    }
 }
-  
-.column img {
+
+.thumbnail img {
     /* vertical-align: middle; */
     width: 100%;
     max-width: 1024px;
+    aspect-ratio: 36 / 24;
+    object-fit: cover;
     animation-name: develop;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -72,14 +75,6 @@ h1 {
     from { filter: invert(1); }
     to { filter: invert(0); }
 }
-
-@media all and (min-width: 1024px) { 
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
 
 .film_number {
     color: var(--colorAccentOrange);

@@ -3,28 +3,10 @@ permalink: /filmstrip
 ---
 
 {% assign site_photos = site.photos | reverse %}
-
-<div class="row">
-    <div class="column">
-    {% for photo in site_photos %}
-        {% assign mod = forloop.index | modulo: 2 %}
-        {% if mod != 0 %}
-            <!-- odd -->
-            <a href="{{ photo.url }}">
-                <img style="animation-delay: {{ forloop.index | times: 150 }}ms;" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
-            </a>
-        {% endif %}
-    {% endfor %}
-    </div>
-    <div class="column">
-        {% for photo in site_photos %}
-            {% assign mod = forloop.index | modulo: 2 %}
-            {% if mod == 0 %}
-                <!-- odd -->
-                <a href="{{ photo.url }}">
-                    <img style="animation-delay: {{ forloop.index | times: 150 }}ms;" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
-                </a>
-            {% endif %}
-        {% endfor %}
-    </div>
+{% for photo in site_photos %}
+<div class="thumbnail">
+    <a href="{{ photo.url }}">
+        <img style="animation-delay: {{ forloop.index | times: 500 | plus: 1000 }}ms;" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
+    </a>
 </div>
+{% endfor %}

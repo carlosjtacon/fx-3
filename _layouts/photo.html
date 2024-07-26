@@ -4,11 +4,23 @@ layout: default
 
 {% include breadcrumbs.html %}
 
+{% assign pos = page.url | size | minus: 1 %}
+{% assign url_base = page.url | slice: 0, pos %}
+
+{% assign next_photo_number = page.title | plus: 1 %}
+{% assign previous_photo_number = page.title | minus: 1 %}
+
+{% assign total_photos = site.photos | size %}
+<span class="navigation">
+    {% if previous_photo_number != 0 %}
+    <a href="{{url_base}}{{previous_photo_number}}">← Previous</a>
+    {% endif %}
+    ·
+    {% if next_photo_number <= total_photos %}
+    <a href="{{url_base}}{{next_photo_number}}">Next →</a>
+    {% endif %}
+</span>
+
 <h1><span class="film_number">{{ page.title }}</span> {{ page.photo_filename }}</h1>
 <img class="imgdetails" src="/assets/photos/{{ page.photo_filename }}.jpeg"/>
 {{ content }}
-
-<!-- {% assign next_photo_number = page.title | plus: 0 %}
-{% assign previous_photo_number = page.title | minus: 1 %}
-<a href="{{ site.photos[next_photo_number].url }}">Next {{next_photo_number}}</a>
-<a href="{{ site.photos[previous_photo_number].url }}">Previous {{previous_photo_number}}</a> -->

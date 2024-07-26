@@ -7,20 +7,23 @@ layout: default
 {% assign pos = page.url | size | minus: 1 %}
 {% assign url_base = page.url | slice: 0, pos %}
 
-{% assign next_photo_number = page.title | plus: 1 %}
-{% assign previous_photo_number = page.title | minus: 1 %}
-
+{% assign photo_number = page.title | plus: 0 %}
+{% assign next_photo_number = photo_number | plus: 1 %}
+{% assign previous_photo_number = photo_number | minus: 1 %}
 {% assign total_photos = site.photos | size %}
+
+{% if previous_photo_number == 0 %}
+    {% assign previous_photo_number = photo_number%}
+{% endif %}
+{% if next_photo_number > total_photos %}
+    {% assign next_photo_number = photo_number%}
+{% endif %}
+
 <span class="navigation">
-    {% if previous_photo_number != 0 %}
-    <a href="{{url_base}}{{previous_photo_number}}">← Previous</a>
-    {% endif %}
-    ·
-    {% if next_photo_number <= total_photos %}
-    <a href="{{url_base}}{{next_photo_number}}">Next →</a>
-    {% endif %}
+    <a href="{{url_base}}{{previous_photo_number}}">← Previous</a> · <a href="{{url_base}}{{next_photo_number}}">Next →</a>
 </span>
 
 <h1><span class="film_number">{{ page.title }}</span> {{ page.photo_filename }}</h1>
 <img class="imgdetails" src="/assets/photos/{{ page.photo_filename }}.jpeg"/>
+
 {{ content }}

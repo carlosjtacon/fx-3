@@ -1,14 +1,23 @@
 ---
 permalink: /filmstrip/index.html
+layout: default
+title: Filmstrip
 ---
 
 {% include header.html %}
+
+{% assign anim_wait = 10000 %}
+{% assign anim_perpicture = 150 %}
+<div class="progress-bar">
+    <span class="progress-bar-boot" style="animation-duration: {{anim_wait}}ms;"></span>
+    <span class="progress-bar-develop" style="animation-delay: {{anim_wait}}ms; animation-duration: {{site.photos | size | times: anim_perpicture}}ms;"></span>
+</div>
 
 {% assign site_photos = site.photos | reverse %}
 {% for photo in site_photos %}
 <div class="thumbnail">
     <a href="{{ photo.url }}">
-        <img style="animation-delay: {{ forloop.index | times: 500 | plus: 1000 }}ms;" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
+        <img style="animation-delay: {{ forloop.index | times: anim_perpicture | plus: anim_wait }}ms;" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
     </a>
 </div>
 {% endfor %}

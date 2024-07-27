@@ -72,14 +72,17 @@ p {
 }
 
 .thumbnail img {
-    /* vertical-align: middle; */
     width: 100%;
     max-width: 1024px;
     aspect-ratio: 36 / 24;
     object-fit: cover;
     animation-name: develop;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: both;
+}
+
+.thumbnail img:hover {
+    filter: invert(0) !important;
 }
 
 @keyframes develop {
@@ -123,6 +126,40 @@ p {
     pointer-events: none;
     cursor: default;
     color: grey;
+}
+
+
+.progress-bar {
+    width: 100%;
+    height: 1em;
+    background-color: var(--backgroundColor);
+    border: solid 1px var(--colorAccentOrange);
+    margin-bottom: 1em;
+}
+
+.progress-bar-boot {
+    float: left;
+    height: 100%;
+    background-color: var(--colorAccentOrange);
+    animation-name: progress_boot;
+    animation-fill-mode: both;
+}
+.progress-bar-develop {
+    float: left;
+    height: 100%;
+    background-color: var(--colorAccentRed);
+    animation-name: progress_develop;
+    animation-fill-mode: both;
+}
+
+@keyframes progress_boot {
+    from { width: 0%; }
+    to { width: 75%; }
+}
+
+@keyframes progress_develop {
+    from { width: 0%; }
+    to { width: 25%; }
 }
 
 /* DESKTOP OVERRIDES */

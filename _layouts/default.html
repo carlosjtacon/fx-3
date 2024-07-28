@@ -11,6 +11,11 @@
     <link rel="preload" href="/assets/fonts/hubot_sans/Hubot-Sans.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/images/fx3_color.webp" as="image" type="image/webp" crossorigin>
     <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:description" content="{{page.photo_filename}}">
+    <meta property="og:image" content="{% if page.photo_filename %}{{site.url}}/assets/photos/{{ page.photo_filename }}-thumb.webp{%endif%}">
+    <meta property="og:url" content="{{site.url}}{{page.url}}">
   </head>
   <body>
       {{ content }}

@@ -1,5 +1,4 @@
 ---
-layout: none
 permalink: /feed.xml
 ---
 
@@ -19,6 +18,8 @@ permalink: /feed.xml
         <description><![CDATA[<img src="{% if post.photo_filename %}{{site.url}}/assets/photos/{{ post.photo_filename }}.jpeg{%endif%}"/><p>{{ post.content | xml_escape }}</p>]]></description>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% assign image_files = site.static_files | where: "basename", post.photo_filename %}
+        <pubDate>{{ image_files[0].modified_time | date_to_rfc822 }}</pubDate>
       </item>
     {% endfor %}
   </channel>

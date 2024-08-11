@@ -16,3 +16,9 @@ To add new photos:
    - Execute `./thumbs.sh` to generate the webp thumbnails. I rotate the portrait photos first to give it a more analog feel.
    - Execute `./posts.sh $collectionName` to generate the posts.
 4. Edit the new `_posts` description.
+
+
+To-do:
+- Roll category/collection page. 
+- Support for other cameras (disponsable, maybe medium format fuji, maybe half frame kodak)
+- analog.carlosjtacon.com/fx-3 ??? filmstrip, negatives, films

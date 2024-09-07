@@ -25,7 +25,9 @@ camera: $1
 photo_filename: ${photo_basename}
 ---
 
-Description.
+English.
+
+Español.
 "
     last_post_number=$(( $last_post_number + 1))
     filename=$(printf %04d $last_post_number).md

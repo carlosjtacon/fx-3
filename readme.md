@@ -19,7 +19,6 @@ To add new photos:
 
 
 To-do:
-- Roll $collectionName page. 
 - Create disponsable camera section
 - spanish / english : maybe just with css first line one language second line another color
 - camera story page, maybe just write under the fx-3 camera page as content

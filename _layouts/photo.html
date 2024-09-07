@@ -19,13 +19,17 @@ layout: default
     {% assign next_photo_number = photo_number%}
 {% endif %}
 
-<div class="navigation">
-    <a class="{% if next_photo_number == photo_number %}disabled{%endif%}" href="{{url_base}}{{next_photo_number | prepend: '0000' | slice: -4, 4 }}">← Next</a> · <a class="{% if previous_photo_number == photo_number %}disabled{%endif%}" href="{{url_base}}{{previous_photo_number | prepend: '0000' | slice: -4, 4 }}">Prev →</a>
-</div>
 {% assign number = page.photo_filename | split : '_' | last %}
+
+<div class="navigation">
+    <a class="{% if next_photo_number == photo_number %}disabled{%endif%}" href="{{url_base}}{{next_photo_number | prepend: '0000' | slice: -4, 4 }}">← Next</a>
+    · 
+    <a href="{{page.photo_filename | remove: number | split: '_' | join: '_'}}">Roll</a>
+    · 
+    <a class="{% if previous_photo_number == photo_number %}disabled{%endif%}" href="{{url_base}}{{previous_photo_number | prepend: '0000' | slice: -4, 4 }}">Prev →</a>
+</div>
+
 <h1><span class="film_number">{{ page.title }}</span> {{ page.photo_filename | replace : '_', ' ' | remove: number }}</h1>
 <img class="imgdetails" src="/assets/photos/{{page.camera}}/{{page.photo_filename}}.jpeg"/>
 
 {{ content }}
-
-<!-- <img src="/assets/images/fx3_top.webp" width="300px" style="position: absolute; right: 0; margin-top: 25px; filter: saturate(3)"/> -->

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% include breadcrumbs.html %}
+<br>
+{% assign site_photos = site.photos | reverse %}
+{% for photo in site_photos %}
+{% assign number = photo.photo_filename | split : '_' | last %}
+{% assign roll = photo.photo_filename | remove: number | split: '_' | join: '_' %}
+{% if roll == page.roll %}
+<div class="thumbnail">
+    <a href="{{photo.url}}">
+        <img style="animation-delay: {{ forloop.index | times: anim_perpicture | plus: anim_wait }}ms;" src="/assets/photos/{{page.camera}}/{{photo.photo_filename}}-thumb.webp"/>
+    </a>
+</div>
+{% endif %}
+{% endfor %}
+<br>
+{{ content }}

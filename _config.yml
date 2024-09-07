@@ -1,6 +1,6 @@
-title: FX-3
-description: Analog pictures taken with the Yashica FX-3
-url: https://fx-3.carlosjtacon.com 
+title: Filmstrip
+description: Analog pictures taken with the Yashica FX-3 and maybe other cameras.
+url: https://filmstrip.carlosjtacon.com 
 permalink: "/:categories/:title"
 
 collections:
@@ -25,7 +25,7 @@ defaults:
       path: ""
       type: "photos"
     values:
-      permalink: "/filmstrip/:title"
+      permalink: "/:path"
       layout: "photo"
 
 exclude:

@@ -1,23 +1,7 @@
 ---
 permalink: /fx-3/index.html
-layout: default
+layout: filmstrip
+camera: fx-3
 title: FX-3
 ---
 
-{% include header.html %}
-
-{% assign anim_wait = 10000 %}
-{% assign anim_perpicture = 150 %}
-<div class="progress-bar">
-    <span class="progress-bar-boot" style="animation-duration: {{anim_wait}}ms;"></span>
-    <span class="progress-bar-develop" style="animation-delay: {{anim_wait}}ms; animation-duration: {{site.photos | size | times: anim_perpicture}}ms;"></span>
-</div>
-
-{% assign site_photos = site.photos | reverse %}
-{% for photo in site_photos %}
-<div class="thumbnail">
-    <a href="{{ photo.url }}">
-        <img style="animation-delay: {{ forloop.index | times: anim_perpicture | plus: anim_wait }}ms;" src="/assets/photos/{{ photo.photo_filename }}-thumb.webp"/>
-    </a>
-</div>
-{% endfor %}

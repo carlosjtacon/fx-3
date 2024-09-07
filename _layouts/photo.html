@@ -24,7 +24,7 @@ layout: default
 </div>
 {% assign number = page.photo_filename | split : '_' | last %}
 <h1><span class="film_number">{{ page.title }}</span> {{ page.photo_filename | replace : '_', ' ' | remove: number }}</h1>
-<img class="imgdetails" src="/assets/photos/{{ page.photo_filename }}.jpeg"/>
+<img class="imgdetails" src="/assets/photos/{{page.camera}}/{{page.photo_filename}}.jpeg"/>
 
 {{ content }}
 

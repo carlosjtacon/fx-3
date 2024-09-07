@@ -21,8 +21,6 @@ To add new photos:
 To-do:
 - Roll category/collection page. 
 - Support for other cameras (disponsable, maybe medium format fuji, maybe half frame kodak)
-- analog.carlosjtacon.com/fx-3 ??? analog, roll, filmstrip, negatives, films
-- spanish / english
-- camera story
-
-roll.carlosjtacon.com
+- filmstrip.carlosjtacon.com/fx-3
+- spanish / english : maybe just with css first line one language second line another color
+- camera story page

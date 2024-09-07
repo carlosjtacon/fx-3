@@ -17,7 +17,7 @@ permalink: /feed.xml
     {% for photo in site_photos %}
       <item>
         <title>{{ photo.title | xml_escape }}</title>
-        <description><![CDATA[<img src="{{{% if photo.photo_filename %}{{site.url}}/assets/photos/{{ photo.camera }}/{{ photo.photo_filename }}.jpeg{%endif%}}}"/><p>{{ photo.content | strip | xml_escape }}</p>]]></description>
+        <description><![CDATA[<img src="{% if photo.photo_filename %}{{site.url}}/assets/photos/{{ photo.camera }}/{{ photo.photo_filename }}.jpeg{%endif%}"/><p>{{ photo.content | strip | xml_escape }}</p>]]></description>
         <link>{{ photo.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ photo.url | prepend: site.baseurl | prepend: site.url }}</guid>
       </item>

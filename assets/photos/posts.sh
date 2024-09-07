@@ -1,14 +1,15 @@
 #! /bin/bash 
 # usage ./posts.sh 202210_BW_dorset_london
 
-photos_dir="../../_photos/"
+photos_dir="../../_photos/$1/"
 last_post_number=`basename -s .md $(ls $photos_dir | sort -V | tail -n 1)`
 last_post_number=`expr "$last_post_number"`
 
-for i in $1*.jpeg
+for i in $1/*.jpeg
 do
     photo_basename=`basename -s .jpeg $i`
     template="---
+camera: $1
 photo_filename: ${photo_basename}
 ---
 

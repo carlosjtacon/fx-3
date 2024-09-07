@@ -1,8 +1,8 @@
 #! /bin/bash 
 # requires imagemagick installed - brew install imagemagick
 THUMB_MAX=1024
-for i in *.jpeg
+for i in $1/*.jpeg
 do
     filename=`basename -s .jpeg $i`
-    [ ! -f "$filename-thumb.webp" ] && magick "$i" -thumbnail "${THUMB_MAX}>" "$filename-thumb.webp"
+    [ ! -f "$1/$filename-thumb.webp" ] && magick "$i" -thumbnail "${THUMB_MAX}>" "$1/$filename-thumb.webp"
 done

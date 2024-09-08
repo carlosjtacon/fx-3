@@ -1,5 +1,5 @@
 #! /bin/bash 
-# usage ./posts.sh fx-3 202210_BW_dorset_london
+# usage ./posts.sh FX-3 202210_BW_dorset_london
 
 pages_dir="../../_pages/$1/"
 template="---

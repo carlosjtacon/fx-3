@@ -1,7 +1,7 @@
 ---
-permalink: /fx-3/202407_CO_dartmoor_cornwall_spain.html
+permalink: /FX-3/202407_CO_dartmoor_cornwall_spain.html
 layout: roll
-camera: fx-3
+camera: FX-3
 roll: 202407_CO_dartmoor_cornwall_spain
 ---
 

@@ -1,7 +1,7 @@
 ---
-permalink: /fx-3/202212_CO_london.html
+permalink: /FX-3/202212_CO_london.html
 layout: roll
-camera: fx-3
+camera: FX-3
 roll: 202212_CO_london
 ---
 

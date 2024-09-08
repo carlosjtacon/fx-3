@@ -55,20 +55,12 @@ p + p {
 }
 
 .header {
-    padding: 5px;
     width: 100%;
-    height: 200px;
     max-width: 1024px;
-    margin-bottom: 1em;
-    background-image: url('/assets/images/fx3_bw.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    transition: background-image 0.2s ease-in-out;
 }
 
 .header:hover {
-    background-image: url('/assets/images/fx3_color.webp');
+    filter: brightness(1.5) saturate(5);
 }
 
 .thumbnail {

@@ -9,6 +9,7 @@
 
 :root {
     --colorBlack: rgb(28, 28, 28);
+    --colorGrey: rgb(128, 128, 128);
     --colorWhite: rgb(230, 230, 230);
     --colorAccentRed: rgb(235 29 38);
     --colorAccentOrange: rgb(255 183 0);
@@ -47,6 +48,10 @@ a:hover {
 p {
     font-size: 1.15em;
     font-weight: 800;
+}
+
+p + p {
+    color: var(--colorGrey);
 }
 
 .header {
@@ -125,9 +130,8 @@ p {
 .disabled {
     pointer-events: none;
     cursor: default;
-    color: grey;
+    color: var(--colorGrey);
 }
-
 
 .progress-bar {
     width: 100%;

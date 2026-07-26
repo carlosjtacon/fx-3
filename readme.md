@@ -12,7 +12,7 @@ To add new photos:
 
 1. Add photos in `/assets/photos/$camera` with the name `$collectionName_$photoNumber.jpeg`.
 2. Should use [ImageOptim](https://imageoptim.com/mac) or similar sofware to compress the new photos (I have it as lossy 85%-95% quality).
-3. Go to `/assets/photos/` in the terminal. 
+3. Go to `/assets/photos/` in the terminal.
    - Execute `./thumbs.sh $camera` to generate the webp thumbnails. I rotate the portrait photos first to give it a more analog feel.
    - Execute `./posts.sh $camera $collectionName` to generate the posts.
 4. Edit the new `_posts` description.

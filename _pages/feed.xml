@@ -10,13 +10,14 @@ permalink: /feed.xml
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {%- assign site_rolls = site.pages | reverse | where: "layout", "roll" %}
+    {%- assign site_rolls = site.pages | where: "layout", "roll" %}
+    {%- assign site_rolls = site_rolls | sort: "roll" | reverse %}
+    {%- assign site_rolls = site_rolls | sort: "date" | reverse %}
     {%- for roll_page in site_rolls %}
       <item>
-        <title>{{ roll_page.title | xml_escape }}</title>
+        <title>[{{ roll_page.camera | xml_escape }}] {{ roll_page.title | xml_escape }}</title>
+        <pubDate>{{ roll_page.date | date_to_rfc822 }}</pubDate>
         <description><![CDATA[
         {%- assign site_photos = site.photos | reverse %}
         {%- for photo in site_photos %}
@@ -32,7 +33,6 @@ permalink: /feed.xml
         {%- endfor %}
         ]]></description>
         <link>{{ roll_page.url | prepend: site.baseurl | prepend: site.url | xml_escape }}</link>
-        <guid isPermaLink="true">{{ roll_page.url | prepend: site.baseurl | prepend: site.url | xml_escape }}</guid>
       </item>
     {%- endfor %}
   </channel>

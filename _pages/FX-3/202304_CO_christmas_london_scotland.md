@@ -3,6 +3,7 @@ permalink: /FX-3/202304_CO_christmas_london_scotland.html
 layout: roll
 camera: FX-3
 roll: 202304_CO_christmas_london_scotland
+date: 2023-04-21
 ---
 
 <!-- Description. -->

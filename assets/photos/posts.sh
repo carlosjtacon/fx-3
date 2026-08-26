@@ -1,4 +1,4 @@
-#! /bin/bash 
+#! /bin/bash
 # usage ./posts.sh FX-3 202210_BW_dorset_london
 
 pages_dir="../../_pages/$1/"
@@ -7,6 +7,7 @@ permalink: /$1/$2.html
 layout: roll
 camera: $1
 roll: $2
+date: $(date +"%Y-%m-%d")
 ---
 
 <!-- Description. -->
